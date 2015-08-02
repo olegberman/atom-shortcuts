@@ -10,10 +10,15 @@
   position: absolute;
   top: 0; bottom: 0;
   left: 0; right: 0;
-  margin: 10%;
+  margin: 5%;
   background-color: @app-background-color;
   z-index: 2;
   border: 1px solid @base-border-color;
+  overflow-y: scroll;
+
+  .left {
+    float: left;
+  }
 
   .item {
     border: 1px solid @text-color;

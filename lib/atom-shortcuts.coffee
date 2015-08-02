@@ -45,10 +45,10 @@ module.exports = AtomShortcuts =
 
   html: "
     <!-- First column -->
-    <div class='one-third'>
+    <div class='one-third left'>
       <!-- General section -->
       <div class='section'>
-        <h2>General</h1>
+        <h2>General</h2>
         <div class='item'>
           <p><b>shift + ⌘ + p</b></p>
           Toggle command palette
@@ -57,7 +57,7 @@ module.exports = AtomShortcuts =
           <p><b>⌘ + /</b></p>
           Toggle line/selection comment
         </div>
-        <div class='item'>
+        <div class='item item-last'>
           <p><b>ctrl + space</b></p>
           Show available auto-completions
         </div>
@@ -66,7 +66,7 @@ module.exports = AtomShortcuts =
 
       <!-- Find section -->
       <div class='section'>
-        <h2>Find</h1>
+        <h2>Find</h2>
         <div class='item'>
           <p><b>⌘ + f</b></p>
           Find in file
@@ -79,24 +79,74 @@ module.exports = AtomShortcuts =
           <p><b>shift + ⌘ + f</b></p>
           Find in project
         </div>
-        <div class='item'>
+        <div class='item item-last'>
           <p><b>⌘ + e</b></p>
           Use selection for find
         </div>
       </div>
       <!-- /Find section -->
 
+      <!-- View/Window Manipulation -->
+      <div class='section'>
+        <h2>View/Window Manipulation</h2>
+        <div class='item'>
+          <p><b>⌘ + \</b></p>
+          Toggle tree-view sidebar
+        </div>
+        <div class='item'>
+          <p><b>ctrl + ⌘ + f</b></p>
+          Toggle fullscreen
+        </div>
+        <div class='item'>
+          <p><b>⌘ + k, left/right/up/down</b></p>
+          Split pane left/right/up/down
+        </div>
+        <div class='item item-last'>
+          <p><b>⌘ + k, ⌘ + left/right/up/down</b></p>
+          Focus pane left/right/up/down
+        </div>
+      </div>
+      <!-- /View/Window Manipulation -->
+
     </div>
     <!-- /First column -->
 
     <!-- Second column -->
-    <div class='one-third'>
-
+    <div class='one-third left'>
+      <!-- File Navigation section -->
+      <div class='section'>
+        <h2>File Navigation</h2>
+        <div class='item'>
+          <p><b>⌘ + p</b></p>
+          Toggle file finder
+        </div>
+        <div class='item'>
+          <p><b>ctrl + g></p>
+          Goto line
+        </div>
+        <div class='item'>
+          <p><b>⌘ + r</b></p>
+          Goto symbol
+        </div>
+        <div class='item'>
+          <p><b>shift + ⌘ + { / }</b></p>
+          Previous/next file
+        </div>
+        <div class='item'>
+          <p><b>⌘ + F2</b></p>
+          Set bookmark
+        </div>
+        <div class='item item-last'>
+          <p><b>F2</b></p>
+          Goto next bookmark
+        </div>
+      </div>
+      <!-- /File Navigation section -->
     </div>
     <!-- /Second column -->
 
     <!-- Third column -->
-    <div class='one-third'>
+    <div class='one-third left'>
 
     </div>
     <!-- /Third column -->
