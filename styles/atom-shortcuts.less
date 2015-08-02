@@ -5,27 +5,42 @@
 @import "ui-variables";
 
 .atom-shortcuts {
-  font-family: 'Lucida Console';
-  color: #777777;
+  color: @text-color;
+  font-size: @font-size;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
   margin: 10%;
-  background-color: #f9f9f9;
+  background-color: @app-background-color;
   z-index: 2;
+  border: 1px solid @base-border-color;
 
-  .third {
+  .item {
+    border: 1px solid @text-color;
+    border-bottom: 0;
+    padding: 5px;
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .item-last {
+    border-bottom: 1px solid @text-color;
+  }
+
+  .one-third {
     width: 33.3%;
   }
 
   .section {
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ddddd;
-
-
+    padding: 5px;
+    border-bottom: 0;
+    h2 {
+      margin: 0;
+      padding: 5px 0;
+    }
   }
+
 
 }

@@ -16,10 +16,13 @@ module.exports = AtomShortcuts =
     @window.innerHTML = @html
     @window.style.display = 'none'
     document.body.appendChild(@window)
-    document.body.addEventListener 'keydown', @keyDown.bind(this)
-    document.body.addEventListener 'keyup', @keyUp.bind(this)
+    @keyDown = @keyDown.bind(@)
+    @keyUp = @keyUp.bind(@)
+    document.body.addEventListener 'keydown', @keyDown
+    document.body.addEventListener 'keyup', @keyUp
 
   keyDown: (e) ->
+    console.log e
     @backTick.down = yes if e.which is @backTick.code
     @ctrl.down = yes if e.which is @ctrl.code
     @showWindow() if @backTick.down and @ctrl.down
@@ -36,25 +39,65 @@ module.exports = AtomShortcuts =
     @window.style.display = 'none'
 
   deactivate: ->
-
-  serialize: ->
-    atomShortcutsViewState: @atomShortcutsView.serialize()
+    document.body.removeEventListener 'keydown', @keyDown
+    document.body.removeEventListener 'keyup', @keyUp
+    @window.remove()
 
   html: "
-    <div class='third'>
+    <!-- First column -->
+    <div class='one-third'>
+      <!-- General section -->
       <div class='section'>
-        <h1>General</h1>
+        <h2>General</h1>
+        <div class='item'>
+          <p><b>shift + ⌘ + p</b></p>
+          Toggle command palette
+        </div>
+        <div class='item'>
+          <p><b>⌘ + /</b></p>
+          Toggle line/selection comment
+        </div>
+        <div class='item'>
+          <p><b>ctrl + space</b></p>
+          Show available auto-completions
+        </div>
       </div>
-      <div>
-        cmd + shift + x
+      <!-- /General section -->
+
+      <!-- Find section -->
+      <div class='section'>
+        <h2>Find</h1>
+        <div class='item'>
+          <p><b>⌘ + f</b></p>
+          Find in file
+        </div>
+        <div class='item'>
+          <p><b>⌘ + g</b></p>
+          Find next
+        </div>
+        <div class='item'>
+          <p><b>shift + ⌘ + f</b></p>
+          Find in project
+        </div>
+        <div class='item'>
+          <p><b>⌘ + e</b></p>
+          Use selection for find
+        </div>
       </div>
-    </div>
-
-    <div class='third'>
+      <!-- /Find section -->
 
     </div>
+    <!-- /First column -->
 
-    <div class='third'>
+    <!-- Second column -->
+    <div class='one-third'>
 
     </div>
+    <!-- /Second column -->
+
+    <!-- Third column -->
+    <div class='one-third'>
+
+    </div>
+    <!-- /Third column -->
   "
