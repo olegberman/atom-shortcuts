@@ -22,7 +22,6 @@ module.exports = AtomShortcuts =
     document.body.addEventListener 'keyup', @keyUp
 
   keyDown: (e) ->
-    return false if @backTick.down and @ctrl.down
     @backTick.down = yes if e.which is @backTick.code
     @ctrl.down = yes if e.which is @ctrl.code
     @showWindow() if @backTick.down and @ctrl.down
@@ -88,7 +87,7 @@ module.exports = AtomShortcuts =
       <div class='section'>
         <h2>View/Window Manipulation</h2>
         <div class='item'>
-          <p><b>⌘ + \</b></p>
+          <p><b>⌘+ \</b></p>
           Toggle tree-view sidebar
         </div>
         <div class='item'>
@@ -117,7 +116,7 @@ module.exports = AtomShortcuts =
           Toggle file finder
         </div>
         <div class='item'>
-          <p><b>ctrl + g></p>
+          <p><b>ctrl + g></b></p>
           Goto line
         </div>
         <div class='item'>
