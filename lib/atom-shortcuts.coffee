@@ -142,6 +142,40 @@ module.exports = AtomShortcuts =
         </div>
       </div>
       <!-- /File Navigation section -->
+      <!-- Folding section -->
+      <div class='section'>
+        <h2>Folding</h2>
+        <div class='item'>
+          <p><b>ctrl + ⌘ + [ / ]</b></p>
+          Fold/unfold current code block
+        </div>
+        <div class='item'>
+          <p><b>option + shift + ⌘ + [ / ]</b></p>
+          Fold/unfold all code blocks
+        </div>
+        <div class='item item-last'>
+          <p><b>⌘ + 1-9</b></p>
+          Fold code blocks at depth 1-9
+        </div>
+      </div>
+      <!-- /Folding section -->
+      <!-- Word Manipulation -->
+      <div class='section'>
+        <h2>Word Manipulation</h2>
+        <div class='item'>
+          <p><b>ctrl + t</b></p>
+          Transpose characters either side of cursor
+        </div>
+        <div class='item'>
+          <p><b>option + backspace</b></p>
+          Delete text to beginning of word
+        </div>
+        <div class='item item-last'>
+          <p><b>option + delete</b></p>
+          Delete text to end of word
+        </div>
+      </div>
+      <!-- /Word Manipulation -->
     </div>
     <!-- /Second column -->
 
