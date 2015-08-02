@@ -1,7 +1,7 @@
 {
   "name": "atom-shortcuts",
   "main": "./lib/atom-shortcuts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Helps you learn Atom's shortcuts, hit ctrl + ` to see a shortcut cheatsheet.",
   "keywords": [
     "shortcuts",
