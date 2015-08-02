@@ -2,10 +2,16 @@
   "name": "atom-shortcuts",
   "main": "./lib/atom-shortcuts",
   "version": "0.0.0",
-  "description": "A short description of your package",
+  "description": "Helps you learn Atom's shortcuts, hit ctrl + ` to see a shortcut cheatsheet.",
   "keywords": [
+    "shortcuts",
+    "shortcut",
+    "cheatsheet",
+    "productivity",
+    "atom-shortcuts",
+    "hotkey",
   ],
-  "repository": "https://github.com/atom/atom-shortcuts",
+  "repository": "https://github.com/olegberman/atom-shortcuts",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
