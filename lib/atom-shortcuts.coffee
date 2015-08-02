@@ -22,7 +22,7 @@ module.exports = AtomShortcuts =
     document.body.addEventListener 'keyup', @keyUp
 
   keyDown: (e) ->
-    console.log e
+    return false if @backTick.down and @ctrl.down
     @backTick.down = yes if e.which is @backTick.code
     @ctrl.down = yes if e.which is @ctrl.code
     @showWindow() if @backTick.down and @ctrl.down
@@ -63,7 +63,6 @@ module.exports = AtomShortcuts =
         </div>
       </div>
       <!-- /General section -->
-
       <!-- Find section -->
       <div class='section'>
         <h2>Find</h2>
@@ -85,7 +84,6 @@ module.exports = AtomShortcuts =
         </div>
       </div>
       <!-- /Find section -->
-
       <!-- View/Window Manipulation -->
       <div class='section'>
         <h2>View/Window Manipulation</h2>
@@ -107,10 +105,8 @@ module.exports = AtomShortcuts =
         </div>
       </div>
       <!-- /View/Window Manipulation -->
-
     </div>
     <!-- /First column -->
-
     <!-- Second column -->
     <div class='one-third left'>
       <!-- File Navigation section -->
@@ -181,7 +177,64 @@ module.exports = AtomShortcuts =
 
     <!-- Third column -->
     <div class='one-third left'>
-
+      <!-- Line Manipulation -->
+      <div class='section'>
+        <h2>Line Manipulation</h2>
+        <div class='item'>
+          <p><b>⌘+ ] / [</b></p>
+          Indent/outdent current line
+        </div>
+        <div class='item'>
+          <p><b>⌘ + enter</b></p>
+          Insert new line after current line
+        </div>
+        <div class='item'>
+          <p><b>⌘ + shift + enter</b></p>
+          Insert new line before current line
+        </div>
+        <div class='item'>
+          <p><b>ctrl + shift + k</b></p>
+          Delete current line
+        </div>
+        <div class='item'>
+          <p><b>ctrl + ⌘ + up/down</b></p>
+          Move current line up/down
+        </div>
+        <div class='item'>
+          <p><b>shift + ⌘ + d</b></p>
+          Duplicate current line
+        </div>
+        <div class='item item-last'>
+          <p><b>⌘ + j</b></p>
+          Join current and next lines
+        </div>
+      </div>
+      <!-- /Line Manipulation -->
+      <!-- Selection -->
+      <div class='section'>
+        <h2>Selection</h2>
+        <div class='item'>
+          <p><b>⌘ + d</b></p>
+          Select current word/token
+        </div>
+        <div class='item'>
+          <p><b>⌘ + l</b></p>
+          Select current line
+        </div>
+        <div class='item'>
+          <p><b>option + shift + left/right</b></p>
+          Select to beginning/end of word
+        </div>
+        <div class='item'>
+          <p><b>shift + ⌘ + left/right</b></p>
+          Select to first/last character of line
+        </div>
+        <div class='item item-last'>
+          <p><b>shift + ⌘ + up/down</b></p>
+          Select to top/bottom of document
+        </div>
+      </div>
+      <!-- /Line Manipulation -->
     </div>
     <!-- /Third column -->
   "
